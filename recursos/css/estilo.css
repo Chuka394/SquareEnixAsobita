@@ -1,26 +1,20 @@
-/* ──────────────────────────────────────────────────
-   SQUARE ENIX STORE — CSS PRINCIPAL
-   Paleta: azul oscuro + gris oscuro (no Steam)
-   ────────────────────────────────────────────────── */
-
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-  /* ── PALETA AZUL OSCURO + GRIS OSCURO ── */
-  --bg-primary:   #0b1426;    /* fondo principal: azul muy oscuro */
-  --bg-secondary: #07101f;    /* azul casi negro */
-  --bg-navbar:    #131c30;    /* gris azulado del navbar */
-  --bg-subnav:    #0d1729;    /* subnav */
-  --bg-card:      #1a2438;    /* tarjetas */
-  --bg-input:     #1f2a3e;    /* inputs */
+  --bg-primary:   #0b1426;    
+  --bg-secondary: #07101f;    
+  --bg-navbar:    #131c30;    
+  --bg-subnav:    #0d1729;    
+  --bg-card:      #1a2438;    
+  --bg-input:     #1f2a3e;    
 
-  --accent:       #4a90e2;    /* azul medio (no cyan brillante de Steam) */
+  --accent:       #4a90e2;    
   --accent-dark:  #2c6db0;
   --accent-soft:  rgba(74,144,226,0.15);
 
-  --text-white:   #e8eef5;    /* texto blanco azulado */
-  --text-muted:   #8b96a8;    /* gris azulado */
-  --text-dim:     #5a677d;    /* gris oscuro */
+  --text-white:   #e8eef5; 
+  --text-muted:   #8b96a8;    
+  --text-dim:     #5a677d;   
 
   --border:       rgba(74,144,226,0.18);
   --border-dim:   rgba(255,255,255,0.05);
@@ -49,7 +43,6 @@ textarea, input, select {
   background: var(--bg-input);
 }
 
-/* ── NAVBAR SUPERIOR ── */
 .navbar-top {
   background: var(--bg-navbar);
   display: flex;
@@ -140,7 +133,6 @@ textarea, input, select {
   object-fit: cover;
 }
 
-/* ── SUBNAV ── */
 .navbar-sub {
   background: var(--bg-subnav);
   padding: 0 32px;
@@ -241,7 +233,6 @@ textarea, input, select {
 }
 .subnav-search button svg { width: 18px; height: 18px; }
 
-/* ── PANELES FLOTANTES ── */
 .panel-flotante {
   display: none;
   position: absolute;
@@ -285,7 +276,6 @@ textarea, input, select {
 .panel-empty { padding: 20px; text-align: center; color: var(--text-dim); font-size: 13px; }
 .panel-footer { padding: 10px 14px; border-top: 1px solid var(--border-dim); }
 
-/* ── CONTENEDORES ── */
 .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 .section { margin: 32px 0; }
 
@@ -299,7 +289,6 @@ textarea, input, select {
 
 .divider { border: none; border-top: 1px solid var(--border-dim); margin: 32px 0; }
 
-/* ── HERO CARRUSEL ── (acotado, no full width) */
 .hero-carousel {
   position: relative;
   background: var(--bg-secondary);
@@ -351,7 +340,7 @@ textarea, input, select {
 
 .carousel-info {
   flex: 1 1 36%;
-  width: 36%;            /* Edge fix */
+  width: 36%;           
   min-width: 0;
   background: var(--bg-card);
   padding: 24px 22px;
@@ -440,7 +429,6 @@ textarea, input, select {
   opacity: 1;
 }
 
-/* ── CATEGORÍAS 3×3 (con efecto zoom en hover) ── */
 .categorias-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -497,7 +485,6 @@ textarea, input, select {
 }
 .categoria-card.no-img:hover .cat-label { color: var(--accent); }
 
-/* ── GRID DE JUEGOS ── */
 .games-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -524,7 +511,6 @@ textarea, input, select {
 .game-card-dev { font-size: 11px; color: var(--text-dim); }
 .game-card-price { font-size: 13px; font-weight: 600; color: var(--accent); margin-top: auto; }
 
-/* ── DETALLE DE JUEGO ── */
 .juego-topbar {
   background: var(--bg-subnav);
   padding: 14px 32px;
@@ -642,7 +628,6 @@ textarea, input, select {
 }
 .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
 
-/* ── COMENTARIOS ── */
 .comentario-section { max-width: 1100px; margin: 24px auto; padding: 0 32px; }
 .comentario-section h3 { font-family: 'Rajdhani', sans-serif; font-size: 20px; font-weight: 600; margin-bottom: 16px; }
 
@@ -655,7 +640,6 @@ textarea, input, select {
 .review-title { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
 .review-body { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
 
-/* ── MODAL ── */
 .modal-overlay {
   display: none;
   position: fixed; inset: 0;
@@ -663,7 +647,7 @@ textarea, input, select {
   z-index: 1000;
   align-items: flex-start;
   justify-content: center;
-  overflow-y: auto;           /* Permite scroll del overlay completo */
+  overflow-y: auto;           
   padding: 24px 0;
 }
 .modal-overlay.show { display: flex; }
@@ -676,7 +660,7 @@ textarea, input, select {
   width: 460px;
   max-width: 95vw;
   max-height: calc(100vh - 48px);
-  overflow-y: auto;           /* Scroll interno del modal cuando es muy alto */
+  overflow-y: auto;        
   position: relative;
   margin: auto;
 }
@@ -705,7 +689,6 @@ textarea, input, select {
 .modal-total { font-size: 20px; font-weight: 700; text-align: center; margin-bottom: 20px; }
 .modal-total span { color: var(--accent); }
 
-/* ── BIBLIOTECA ── */
 .biblioteca-wrap { display: flex; height: calc(100vh - 108px); overflow: hidden; }
 
 .bib-sidebar { width: 200px; flex-shrink: 0; background: var(--bg-secondary); border-right: 1px solid var(--border-dim); display: flex; flex-direction: column; overflow: hidden; }
@@ -788,7 +771,6 @@ textarea, input, select {
 .com-post-user { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
 .com-post-text { font-size: 13px; color: var(--text-white); }
 
-/* ── LOGIN ── */
 .auth-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); padding: 40px 16px; }
 .auth-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 40px; width: 420px; max-width: 100%; }
 .auth-logo { text-align: center; font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: 700; color: var(--text-muted); letter-spacing: 2px; margin-bottom: 8px; }
@@ -797,7 +779,6 @@ textarea, input, select {
 .auth-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
 .auth-title { font-family: 'Rajdhani', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 20px; text-align: center; }
 
-/* ── FORMULARIOS ── */
 .formGrupo { margin-bottom: 14px; display: flex; flex-direction: column; gap: 5px; }
 .formGrupo label { font-size: 12px; color: var(--text-muted); font-weight: 500; }
 
@@ -817,7 +798,6 @@ textarea, input, select {
 
 textarea.form-control { resize: vertical; min-height: 90px; }
 
-/* SELECT — texto blanco sobre fondo oscuro */
 select.form-control,
 select.adminInput {
   background: var(--bg-input);
@@ -841,7 +821,6 @@ select.adminInput option {
 
 .btn-block { width: 100%; justify-content: center; padding: 11px; font-size: 14px; }
 
-/* ── PERFIL ── */
 .perfil-hero { background: var(--bg-subnav); padding: 32px; border-bottom: 1px solid var(--border-dim); }
 .perfil-avatar-wrap { position: relative; width: 80px; height: 80px; cursor: pointer; }
 .perfil-avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); }
@@ -851,16 +830,13 @@ select.adminInput option {
 .perfil-stat .num { font-family: 'Rajdhani', sans-serif; font-size: 28px; font-weight: 700; color: var(--accent); }
 .perfil-stat .lbl { font-size: 12px; color: var(--text-muted); }
 
-/* ── CATEGORIAS PILLS ── */
 .cat-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
 .cat-pill { padding: 7px 18px; border-radius: 20px; border: 1px solid var(--border-dim); color: var(--text-muted); font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s; background: none; }
 .cat-pill:hover { border-color: var(--accent); color: var(--accent); }
 .cat-pill.active { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
 
-/* ── CONTACTO/SOPORTE ── */
 .contacto-layout { max-width: 800px; margin: 32px auto; padding: 0 24px; }
 
-/* ── FOOTER ── */
 .footer { background: var(--bg-secondary); border-top: 1px solid var(--border-dim); padding: 40px 32px 20px; margin-top: 48px; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 28px; max-width: 1100px; margin-left: auto; margin-right: auto; }
 .footer-logo { font-family: 'Rajdhani', sans-serif; font-size: 16px; font-weight: 700; color: var(--text-muted); letter-spacing: 2px; margin-bottom: 8px; }
@@ -870,7 +846,6 @@ select.adminInput option {
 .footer-col a:hover { color: var(--accent); }
 .footer-bottom { border-top: 1px solid var(--border-dim); padding-top: 16px; display: flex; justify-content: space-between; font-size: 12px; color: var(--text-dim); max-width: 1100px; margin: 16px auto 0; }
 
-/* ── EMPTY / BADGES ── */
 .empty-msg { text-align: center; padding: 48px 16px; color: var(--text-dim); font-size: 14px; }
 
 .badge { display: inline-block; padding: 2px 10px; border-radius: 10px; font-size: 11px; font-weight: 600; }
@@ -879,19 +854,13 @@ select.adminInput option {
 .badge-warning { background: rgba(251,191,36,0.15); color: var(--warning); }
 .badge-danger { background: rgba(248,113,113,0.15); color: var(--danger); }
 
-/* ── SCROLLBAR ── */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
 
-
-/* ──────────────────────────────────────────────────
-   RESPONSIVE — Tablet (≤960px) y Móvil (≤640px)
-   ────────────────────────────────────────────────── */
-
 @media (max-width: 960px) {
-  /* NAVBAR superior */
+ 
   .navbar-top { padding: 0 16px; flex-wrap: wrap; height: auto; min-height: 60px; }
   .navbar-logo { font-size: 12px; margin-right: 20px; }
   .navbar-sections { gap: 16px; }
@@ -901,13 +870,11 @@ select.adminInput option {
   .nav-user { font-size: 13px; padding: 5px 10px 5px 8px; }
   .nav-user img { width: 26px; height: 26px; }
 
-  /* SUBNAV */
   .navbar-sub { padding: 0 12px; flex-wrap: wrap; height: auto; min-height: 48px; }
   .subnav-btn { padding: 0 12px; font-size: 13px; }
   .subnav-search input { width: 180px; }
   .subnav-search input:focus { width: 220px; }
 
-  /* HERO carrusel */
   .hero-carousel { margin: 18px 16px 0; border-radius: 8px; }
   .carousel-slide { flex-direction: column; }
   .carousel-img-col { flex: none; max-height: 240px; }
@@ -917,25 +884,20 @@ select.adminInput option {
   .carousel-info .game-cover { max-height: 80px; }
   .carousel-nav { width: 32px; height: 50px; font-size: 20px; }
 
-  /* CONTAINER */
   .container { padding: 0 16px; }
 
-  /* CATEGORÍAS 3x3 → 2 columnas en tablet */
   .categorias-grid { grid-template-columns: repeat(2, 1fr); }
 
-  /* JUEGOS */
   .games-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
   .game-card-img { height: 90px; }
   .game-card-title { font-size: 12px; }
 
-  /* JUEGO DETALLE */
   .juego-topbar { padding: 12px 16px; flex-wrap: wrap; gap: 10px; }
   .juego-topbar h1 { font-size: 18px; }
   .juego-body { flex-direction: column; padding: 0 16px; }
   .juego-info { padding: 16px 0 0 0; }
   .juego-compra-bar { padding: 12px 16px; flex-wrap: wrap; }
 
-  /* BIBLIOTECA */
   .biblioteca-wrap { flex-direction: column; height: auto; }
   .bib-sidebar { width: 100%; max-height: 240px; }
   .bib-hero { height: 200px; }
@@ -943,33 +905,26 @@ select.adminInput option {
   .bib-hero-actions { flex-wrap: wrap; gap: 14px; }
   .bib-meta-links { gap: 18px; flex-wrap: wrap; }
 
-  /* COMUNIDAD */
   .comunidad-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
 
-  /* FOOTER */
   .footer { padding: 28px 16px 16px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
   .footer-bottom { flex-direction: column; gap: 6px; align-items: flex-start; }
 
-  /* MODAL */
   .modal-box { padding: 24px 18px; width: 100%; margin: 0 16px; }
 
-  /* AUTH */
   .auth-box { padding: 24px 20px; }
 
-  /* PANELES FLOTANTES */
   .panel-flotante { width: 280px; }
 }
 
 @media (max-width: 640px) {
-  /* NAVBAR — todavía más compacto */
   .navbar-top { padding: 0 12px; }
   .navbar-logo { display: none; }
   .navbar-sections { gap: 10px; order: 3; flex-basis: 100%; justify-content: center; padding: 8px 0; border-top: 1px solid var(--border-dim); margin-top: 6px; }
   .navbar-sections a { font-size: 13px; }
   .navbar-right { margin-left: auto; }
 
-  /* SUBNAV — scroll horizontal */
   .navbar-sub { overflow-x: auto; flex-wrap: nowrap; }
   .subnav-left { flex-shrink: 0; }
   .subnav-btn { padding: 0 10px; font-size: 12px; }
@@ -977,7 +932,6 @@ select.adminInput option {
   .subnav-search input { width: 130px; font-size: 12px; }
   .subnav-search input:focus { width: 160px; }
 
-  /* HERO carrusel — sin info lateral, solo imagen */
   .hero-carousel { margin: 14px 12px 0; }
   .carousel-img-col { max-height: 180px; }
   .carousel-img-col img { height: 180px; }
@@ -987,12 +941,10 @@ select.adminInput option {
   .carousel-info .game-cover { max-height: 60px; }
   .carousel-thumbs img { width: 48px; height: 30px; }
 
-  /* CATEGORÍAS → 1 columna móvil */
   .categorias-grid { grid-template-columns: 1fr; gap: 10px; }
   .categoria-card { aspect-ratio: 21/9; }
   .categoria-card .cat-label { font-size: 18px; }
 
-  /* JUEGOS */
   .games-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .game-card-img { height: 80px; }
   .game-card-body { padding: 8px 10px; }
@@ -1000,30 +952,23 @@ select.adminInput option {
   .game-card-dev { font-size: 10px; }
   .game-card-price { font-size: 12px; }
 
-  /* DETALLE JUEGO */
   .juego-topbar h1 { font-size: 16px; }
   .juego-info { padding: 12px 0 0 0; }
   .juego-meta-row { flex-wrap: wrap; }
   .juego-meta-row .lbl { flex-basis: 100%; flex: none; }
   .juego-compra-title { flex-basis: 100%; }
 
-  /* BIBLIOTECA */
   .bib-sidebar { max-height: 180px; }
   .bib-hero-title { font-size: 20px; }
   .btn-instalar { padding: 8px 16px; font-size: 13px; }
 
-  /* COMUNIDAD */
   .comunidad-grid, .com-page-grid { grid-template-columns: 1fr; }
 
-  /* SECTION TITLES */
   .section-title { font-size: 16px; margin-bottom: 14px; }
 
-  /* CONTACT/SOPORTE */
   .contacto-layout { padding: 0 14px; }
 
-  /* FOOTER */
   .footer-grid { grid-template-columns: 1fr; }
 
-  /* PANELES — full width móvil */
   .panel-flotante { width: calc(100vw - 24px); right: 12px !important; }
 }

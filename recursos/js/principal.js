@@ -23,10 +23,8 @@ function togglePanel(id) {
     document.querySelectorAll('.panel-flotante').forEach(p => p.classList.remove('show'));
     if (!abierto) {
         panel.classList.add('show');
-        // Ocultar el badge específico de ese panel al abrirlo
         const badge = document.querySelector('.nav-badge[data-panel="' + id + '"]');
         if (badge) badge.style.display = 'none';
-        // Si es notificaciones, marcar como vistas en backend
         if (id === 'panelNotif') {
             const fd = new FormData(); fd.append('accion', 'marcar_todas');
             fetch('/squareenix/controladores/notificaciones.php', {method:'POST', body:fd}).catch(()=>{});
@@ -34,13 +32,13 @@ function togglePanel(id) {
     }
 }
 
-// Comprar todo el carrito → redirige a página de checkout
+// Comprar todo el carrito 
 function comprarCarritoCompleto(total) {
     if (!total || total <= 0) { alert('Tu carrito está vacío'); return; }
     window.location.href = '/squareenix/carrito_checkout.php';
 }
 
-// ── CARRUSEL ─────────────────────────────────────────
+// Carrusel
 let idxCarrusel = 0, totalDiap = 0, timerCar = null;
 
 function initCarrusel() {
@@ -57,7 +55,7 @@ function moverCarrusel(dir) {
     timerCar = setInterval(() => moverCarrusel(1), 6000);
 }
 
-// ── GALERÍA DEL JUEGO ────────────────────────────────
+// Galeria del vieojuoge
 function initGaleria() {
     const imgPrincipal = document.getElementById('main-img');
     const miniaturas   = document.querySelectorAll('.juego-thumbs img');
@@ -70,7 +68,7 @@ function initGaleria() {
     }, 4000);
 }
 
-// ── ESTRELLAS ────────────────────────────────────────
+// Estrellas
 function initEstrellas() {
     const estrellas  = document.querySelectorAll('.star-btn');
     const inputCal   = document.getElementById('cal-input');
@@ -88,14 +86,14 @@ function initEstrellas() {
     });
 }
 
-// ── MODAL COMPRA ─────────────────────────────────────
+// Compra
 function abrirModalCompra()  { document.getElementById('modal-compra').classList.add('show'); }
 function cerrarModalCompra() { document.getElementById('modal-compra').classList.remove('show'); }
 document.addEventListener('keydown', e => {
     if (e.key === 'Escape') document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('show'));
 });
 
-// ── NOTIFICACIONES ───────────────────────────────────
+// Notificaciones
 function marcarTodasVistas(e) {
     if (e) e.preventDefault();
     const fd = new FormData();
@@ -104,7 +102,7 @@ function marcarTodasVistas(e) {
         .then(() => document.querySelectorAll('.nav-badge').forEach(b => b.style.display = 'none'));
 }
 
-// ── BIBLIOTECA: filtro lateral ───────────────────────
+// Biblioteca
 function filtrarBib(val) {
     document.querySelectorAll('#lstJuegosBib .bib-game-item').forEach(item => {
         item.style.display = item.dataset.titulo.includes(val.toLowerCase()) ? '' : 'none';
@@ -116,7 +114,7 @@ function toggleFormCompartir() {
     if (frm) frm.style.display = frm.style.display === 'none' ? 'block' : 'none';
 }
 
-// ── INICIO ───────────────────────────────────────────
+// Inicio
 document.addEventListener('DOMContentLoaded', () => {
     initCarrusel();
     initGaleria();
