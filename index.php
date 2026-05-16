@@ -87,7 +87,8 @@ $cats_grid = $pdo->query("SELECT NombreCategoria FROM Categoria ORDER BY NombreC
         <h2 class="section-title">Explorar por categoria</h2>
         <div class="categorias-grid">
             <?php foreach ($cats_grid as $cat): ?>
-            <a href="<?= $base ?>/categorias.php?cat=<?= urlencode($cat) ?>" class="categoria-card no-img">
+            <a href="<?= $base ?>/categorias.php?cat=<?= urlencode($cat) ?>" class="categoria-card">
+                <img src="../SquareEnix/recursos/imagenes/Banner.webp" alt="">
                 <div class="cat-label"><?= htmlspecialchars($cat) ?></div>
             </a>
             <?php endforeach; ?>

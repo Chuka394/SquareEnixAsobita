@@ -69,7 +69,7 @@ $stmt = $pdo->prepare($sql); $stmt->execute($valores); $usuarios = $stmt->fetchA
     <?php if ($mensaje):   ?><div class="adminAlert success"><?= htmlspecialchars($mensaje) ?></div><?php endif; ?>
     <?php if ($error): ?><div class="adminAlert error"><?= htmlspecialchars($error) ?></div><?php endif; ?>
 
-// fIltros
+<!-- fIltros -->
     <form method="GET" class="adminFiltros">
         <input type="text" name="buscar" placeholder="Buscar usuario o correo..." value="<?= htmlspecialchars($busqueda) ?>" class="adminInput" style="max-width:260px;">
         <select name="rol" class="adminInput" style="max-width:160px;">
@@ -129,7 +129,7 @@ $stmt = $pdo->prepare($sql); $stmt->execute($valores); $usuarios = $stmt->fetchA
                                 </select>
                                 <button type="submit" class="btnAdminSm">Guardar</button>
                             </form>
-                            // Banear
+                            <!-- Banear -->
                             <form method="POST" onsubmit="return confirm('¿Banear a <?= htmlspecialchars($u['nombreusuario']) ?>? Ya no podrá iniciar sesión.')">
                                 <input type="hidden" name="accion_usuario" value="banear">
                                 <input type="hidden" name="id_usuario" value="<?= $u['idusuario'] ?>">
@@ -138,7 +138,7 @@ $stmt = $pdo->prepare($sql); $stmt->execute($valores); $usuarios = $stmt->fetchA
                                 </button>
                             </form>
                             <?php else: ?>
-                            //Desbanear
+                            <!--Desbanear -->
                             <form method="POST" onsubmit="return confirm('¿Desbanear a este usuario?')">
                                 <input type="hidden" name="accion_usuario" value="desbanear">
                                 <input type="hidden" name="id_usuario" value="<?= $u['idusuario'] ?>">

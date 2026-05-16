@@ -194,7 +194,7 @@ $disponibles = 5 - $capturaCount;
         </div>
     <?php endif; ?>
 
-// Formulario para los datos del videojugeos
+<!-- Formulario para los datos del videojugeos -->
     <div class="adminFormCard" style="margin-bottom:16px;">
         <h3 style="margin-bottom:16px;">Datos del juego</h3>
         <form method="POST" enctype="multipart/form-data">
@@ -257,7 +257,7 @@ $disponibles = 5 - $capturaCount;
         </form>
     </div>
 
-// Formulario para el logo
+<!-- Formulario para el logo -->
     <div class="adminFormCard" style="margin-bottom:16px;">
         <h3 style="margin-bottom:14px;">Logo
             <small style="font-weight:400;color:var(--text-dim);">— miniatura en listados y panel derecho del juego</small>
@@ -287,7 +287,7 @@ $disponibles = 5 - $capturaCount;
                 <?php endif; ?>
             </div>
 
-// Ya para poder subir el logo
+<!-- Ya para poder subir el logo -->
             <form method="POST" enctype="multipart/form-data" style="flex:1;min-width:220px;">
                 <input type="hidden" name="accion" value="subir_logo">
                 <label style="font-size:13px;color:var(--text-muted);display:block;margin-bottom:8px;">
@@ -304,13 +304,13 @@ $disponibles = 5 - $capturaCount;
         </div>
     </div>
 
-// Formulario para las capturas
+<!-- Formulario para las capturas -->
     <div class="adminFormCard">
         <h3 style="margin-bottom:14px;">Capturas de pantalla
             <small style="font-weight:400;color:var(--text-dim);">— galería grande del juego (<?= $capturaCount ?>/5)</small>
         </h3>
 
-// Capturas actuales
+<!-- Capturas actuales -->
         <?php if (!empty($imgCapturas)): ?>
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:20px;">
             <?php foreach ($imgCapturas as $cap): ?>
@@ -330,7 +330,7 @@ $disponibles = 5 - $capturaCount;
         <p style="color:var(--text-dim);font-size:13px;margin-bottom:16px;">Sin capturas de pantalla aun</p>
         <?php endif; ?>
 
-// Para agregar capturas
+<!-- Para agregar capturas -->
         <?php if ($disponibles > 0): ?>
         <form method="POST" enctype="multipart/form-data">
             <input type="hidden" name="accion" value="subir_capturas">

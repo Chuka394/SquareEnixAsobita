@@ -123,7 +123,7 @@ $top_comunidad = $pdo->query("
             </table>
             <?php endif; ?>
         </div>
-// top de los favoritos
+<!-- top de los favoritos -->
         <div class="adminFormCard" id="sec-favoritos">
             <h3>Juegos más favoriteados</h3>
             <?php if (empty($top_favoritos)): ?><p style="color:var(--text-dim);font-size:13px;margin-top:8px;">Sin favoritos.</p>
@@ -138,7 +138,7 @@ $top_comunidad = $pdo->query("
             </table>
             <?php endif; ?>
         </div>
-// top de lo añadido al carrito
+<!-- top de lo añadido al carrito -->
         <div class="adminFormCard" id="sec-carrito">
             <h3>Mas añadidos al carrito</h3>
             <?php if (empty($top_carrito)): ?><p style="color:var(--text-dim);font-size:13px;margin-top:8px;">Sin datos.</p>
@@ -153,7 +153,7 @@ $top_comunidad = $pdo->query("
             </table>
             <?php endif; ?>
         </div>
-// Mejores calificados
+<!-- Mejores calificados -->
         <div class="adminFormCard" id="sec-calificados">
             <h3>Mejor calificados</h3>
             <?php if (empty($top_calificados)): ?><p style="color:var(--text-dim);font-size:13px;margin-top:8px;">Sin reseñas aun</p>
@@ -170,7 +170,7 @@ $top_comunidad = $pdo->query("
             </table>
             <?php endif; ?>
         </div>
-// Ventan acumuldas por mes
+<!-- Ventan acumuldas por mes -->
         <div class="adminFormCard" id="sec-ventas-mes">
             <h3>📅 Ventas por mes</h3>
             <?php if (empty($ventas_mes)): ?><p style="color:var(--text-dim);font-size:13px;margin-top:8px;">Sin datos.</p>
@@ -185,7 +185,7 @@ $top_comunidad = $pdo->query("
             </table>
             <?php endif; ?>
         </div>
-// Los nuevos usuarios que se unen
+<!-- Los nuevos usuarios que se unen -->
         <div class="adminFormCard" id="sec-usuarios-mes">
             <h3>Nuevos usuarios por mes</h3>
             <table class="adminTabla" style="margin-top:10px;">
@@ -201,7 +201,7 @@ $top_comunidad = $pdo->query("
             </table>
         </div>
 
-// Los reportes por ticket
+<!-- Los reportes por ticket -->
         <div class="adminFormCard" id="sec-tickets">
             <h3>Tickets por estado</h3>
             <?php if (empty($tickets_estado)): ?><p style="color:var(--text-dim);font-size:13px;margin-top:8px;">Sin tickets</p>
@@ -218,7 +218,7 @@ $top_comunidad = $pdo->query("
             <?php endif; ?>
         </div>
 
-// La comunidad mas activa
+<!-- La comunidad mas activa -->
         <div class="adminFormCard" id="sec-comunidad">
             <h3>Juegos con más actividad en comunidad</h3>
             <?php if (empty($top_comunidad)): ?><p style="color:var(--text-dim);font-size:13px;margin-top:8px;">Sin publicaciones</p>

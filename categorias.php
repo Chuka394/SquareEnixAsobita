@@ -54,7 +54,7 @@ if ($cat_actual) {
             — <?= count($juegos_cat) ?> juego<?= count($juegos_cat) != 1 ? 's' : '' ?>
         </span>
     </h2>
-// Para mostrar los juegos de la categorias que escojas
+<!-- Para mostrar los juegos de la categorias que escojas -->
     <?php if (empty($juegos_cat)): ?>
         <div class="empty-msg"><p>No hay juegos en esta categoria todavía.</p></div>
     <?php else: ?>

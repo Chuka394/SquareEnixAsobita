@@ -53,7 +53,7 @@ $top_favoritos= $pdo->query("SELECT v.Titulo, COUNT(*) AS n FROM Favorito f JOIN
             </table>
             <?php endif; ?>
         </div>
-// Para los top favoritos
+<!-- Para los top favoritos -->
         <div class="adminFormCard">
             <h3>Top favoritos</h3>
             <?php if (empty($top_favoritos)): ?>

@@ -129,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php if ($error): ?><div class="form-alert error"><?= htmlspecialchars($error) ?></div><?php endif; ?>
     <?php if ($exito): ?><div class="form-alert success"><?= htmlspecialchars($exito) ?></div><?php endif; ?>
 
-// Panel para el inicio
+<!-- Panel para el inicio -->
     <div id="panel-login" style="display:<?= $tab==='login'?'block':'none' ?>">
         <form method="POST">
             <input type="hidden" name="accion" value="login">
@@ -141,7 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </div>
 
-// Panel del registro de cliente
+<!-- Panel del registro de cliente -->
     <div id="panel-registro" style="display:<?= $tab==='registro'?'block':'none' ?>">
         <?php if (!$mostrar_verificacion): ?>
         <form method="POST">
@@ -167,7 +167,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <?php endif; ?>
     </div>
 
-// Panel de registro del buen admin
+<!-- Panel de registro del buen admin -->
     <div id="panel-admin" style="display:<?= $tab==='admin'?'block':'none' ?>">
         <div class="form-alert info" style="margin-bottom:14px;">
             Necesitas el <strong>codigo secreto de administrador</strong> para crear esta cuenta.

@@ -153,7 +153,7 @@ $etiquetas = array_filter(explode('|', $juego['categorias'] ?? ''));
         <?php if (!$ya_compro): ?>
         <div class="form-alert info" style="margin-top:12px;">Solo puedes comentar juegos que hayas comprado.</div>
         <?php else: ?>
-        <form method="POST" action="<?= $base ?>/controladores/reseña.php" style="margin-top:14px;">
+        <form method="POST" action="<?= $base ?>/controladores/resena.php" style="margin-top:14px;">
             <input type="hidden" name="id_juego" value="<?= $id ?>">
             <div style="display:grid;gap:10px;">
                 <input type="text" name="titulo" class="form-control" placeholder="Título (opcional)">

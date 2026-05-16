@@ -112,7 +112,7 @@ $cats_all = $pdo->query("SELECT NombreCategoria FROM Categoria ORDER BY NombreCa
     <?php if ($mensaje):   ?><div class="adminAlert success"><?= htmlspecialchars($mensaje) ?></div><?php endif; ?>
     <?php if ($error): ?><div class="adminAlert error"><?= htmlspecialchars($error) ?></div><?php endif; ?>
 
-// Formulario para agregar
+<!-- Formulario para agregar -->
     <div id="frmAgregar" class="adminFormCard" style="display:none;margin-bottom:24px;">
         <h3 style="margin-bottom:18px;">Agregar nuevo juego</h3>
         <form method="POST" enctype="multipart/form-data">
@@ -157,7 +157,7 @@ $cats_all = $pdo->query("SELECT NombreCategoria FROM Categoria ORDER BY NombreCa
                     </select>
                 </div>
 
-// Imagenes
+<!-- Imagenes -->
                 <div class="formGrupo" style="border:1px solid var(--border);border-radius:8px;padding:14px;background:rgba(0,188,212,0.04);">
                     <label style="color:var(--accent);font-weight:600;">Logo / Portada <span style="font-size:11px;color:var(--text-dim);font-weight:400;">1 imagen — aparece en listado y en el panel derecho</span></label>
                     <input type="file" name="img_logo" accept="image/*" class="adminInput" style="margin-top:8px;">
@@ -178,7 +178,7 @@ $cats_all = $pdo->query("SELECT NombreCategoria FROM Categoria ORDER BY NombreCa
                     <small style="color:var(--text-dim);">Archivo que el usuario descargará al hacer clic en Instalar.</small>
                 </div>
 
-//Categorias
+<!--Categorias -->
                 <div class="formGrupo formCompleto">
                     <label>Categorías</label>
                     <div class="categoriasCheckGrid">
@@ -196,7 +196,7 @@ $cats_all = $pdo->query("SELECT NombreCategoria FROM Categoria ORDER BY NombreCa
         </form>
     </div>
 
-//Tabla de los videojuegos
+<!--Tabla de los videojuegos -->
     <div class="adminTablaWrap">
         <table class="adminTabla">
             <thead>

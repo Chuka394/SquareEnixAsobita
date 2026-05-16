@@ -48,7 +48,7 @@ $tickets = $pdo->query($sql)->fetchAll();
     </div>
     <?php if ($mensaje): ?><div class="adminAlert success"><?= htmlspecialchars($mensaje) ?></div><?php endif; ?>
 
-    // Filtros
+    <!-- Filtros -->
     <div class="adminFiltros" style="margin-bottom:20px;">
         <?php foreach (['todos','abierto','en_proceso','resuelto'] as $e): ?>
         <a href="?estado=<?= $e ?>" class="cat-pill <?= $filtro===$e?'active':'' ?>"><?= ucfirst(str_replace('_',' ',$e)) ?></a>

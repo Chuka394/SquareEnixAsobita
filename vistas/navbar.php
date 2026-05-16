@@ -2,7 +2,7 @@
 if (!isset($_SESSION)) session_start();
 
 // Conexion que este disponible siempre
-require_once __DIR__ . '/../../configuracion/bd.php';
+require_once __DIR__ . '/../configuracion/bd.php';
 $pdo = bd();
 
 $usuario = $_SESSION['usuario'] ?? null;
@@ -58,7 +58,7 @@ $lstCatsNav = $pdo->query("SELECT NombreCategoria FROM Categoria ORDER BY Nombre
 $imgPlaceholder = $base . '/recursos/imagenes/placeholder.svg';
 $imgAvatarDef = $base . '/recursos/imagenes/avatar-defecto.svg';
 ?>
-//el navbar que esta primero
+<!--el navbar que esta primero -->
 <nav class="navbar-top">
     <a href="<?= $base ?>/index.php" class="navbar-logo">SQUARE ENIX</a>
 
@@ -93,7 +93,7 @@ $imgAvatarDef = $base . '/recursos/imagenes/avatar-defecto.svg';
             </div>
         </div>
 
-//Notificaciones
+<!--Notificaciones -->
         <div style="position:relative;">
             <div class="nav-icon-wrap" onclick="togglePanel('panelNotif')">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
@@ -116,7 +116,7 @@ $imgAvatarDef = $base . '/recursos/imagenes/avatar-defecto.svg';
                 <?php endforeach; endif; ?>
             </div>
         </div>
-//Usuario
+<!--Usuario -->
         <a href="<?= $base ?>/perfil.php" class="nav-user">
             <img src="<?= htmlspecialchars($usuario['imagenurl'] ?? $imgAvatarDef) ?>" alt="avatar">
             <?= htmlspecialchars($usuario['nombreusuario']) ?>
@@ -128,7 +128,7 @@ $imgAvatarDef = $base . '/recursos/imagenes/avatar-defecto.svg';
     </div>
 </nav>
 
-// EL segundo navbar
+<!-- EL segundo navbar -->
 <div class="navbar-sub">
     <div class="subnav-left">
 
@@ -146,7 +146,7 @@ $imgAvatarDef = $base . '/recursos/imagenes/avatar-defecto.svg';
                 <a href="<?= $base ?>/soporte.php">Soporte</a>
             </div>
         </div>
-//Para las recomendaciones
+<!--Para las recomendaciones -->
         <div class="subnav-dropdown">
             <button class="subnav-btn" onclick="toggleDropdown('ddRecomend')">
                 Recomendaciones
@@ -179,7 +179,7 @@ $imgAvatarDef = $base . '/recursos/imagenes/avatar-defecto.svg';
             </div>
         </div>
     </div>
-//Carrito
+<!--Carrito -->
     <?php if ($usuario): ?>
     <div style="position:relative;margin-left:8px;">
         <div class="subnav-cart" onclick="togglePanel('panelCarrito')">
@@ -223,7 +223,7 @@ $imgAvatarDef = $base . '/recursos/imagenes/avatar-defecto.svg';
         </div>
     </div>
     <?php endif; ?>
-//Buscador
+<!--Buscador -->
     <div class="subnav-search">
         <form method="GET" action="<?= $base ?>/buscar.php">
             <input type="text" name="q" placeholder="Buscar en la tienda"

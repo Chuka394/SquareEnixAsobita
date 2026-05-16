@@ -8,7 +8,7 @@ $pagina = basename($_SERVER['PHP_SELF'], '.php');
         <small style="display:block;color:var(--text-dim);margin-top:2px;font-size:11px;">Panel Administrativo</small>
     </div>
     <nav class="adminNav">
-        <a href="<?= $base ?>/administrador/index.php" class="adminNavLink <?= $pagina==='index' ?'active':'' ?>">Dashboard</a>
+        <a href="<?= $base ?>/administrador/index.php" class="adminNavLink <?= $pagina==='index' ?'active':'' ?>">Panel principal</a>
         <a href="<?= $base ?>/administrador/juegos.php" class="adminNavLink <?= $pagina==='juegos' ?'active':'' ?>">Videojuegos</a>
         <a href="<?= $base ?>/administrador/usuarios.php" class="adminNavLink <?= $pagina==='usuarios' ?'active':'' ?>">Usuarios</a>
         <a href="<?= $base ?>/administrador/tickets.php" class="adminNavLink <?= $pagina==='tickets' ?'active':'' ?>">Tickets Soporte</a>
