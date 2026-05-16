@@ -34,7 +34,7 @@ $etiquetas = array_filter(explode('|', $juego['categorias'] ?? ''));
     <link rel="stylesheet" href="<?= $base ?>/recursos/css/estilo.css">
 </head>
 <body>
-<?php include 'vistas/parciales/navbar.php'; ?>
+<?php include 'vistas/navbar.php'; ?>
 
 <div class="juego-topbar">
     <h1><?= htmlspecialchars($juego['titulo']) ?></h1>
@@ -153,7 +153,7 @@ $etiquetas = array_filter(explode('|', $juego['categorias'] ?? ''));
         <?php if (!$ya_compro): ?>
         <div class="form-alert info" style="margin-top:12px;">Solo puedes comentar juegos que hayas comprado.</div>
         <?php else: ?>
-        <form method="POST" action="<?= $base ?>/controladores/resenas.php" style="margin-top:14px;">
+        <form method="POST" action="<?= $base ?>/controladores/reseña.php" style="margin-top:14px;">
             <input type="hidden" name="id_juego" value="<?= $id ?>">
             <div style="display:grid;gap:10px;">
                 <input type="text" name="titulo" class="form-control" placeholder="Título (opcional)">
@@ -269,7 +269,7 @@ function cerrarModalExito() {
 </script>
 <?php endif; ?>
 
-<?php include 'vistas/parciales/footer.php'; ?>
+<?php include 'vistas/footer.php'; ?>
 <script src="<?= $base ?>/recursos/js/principal.js"></script>
 <script>function cambiarImagen(miniatura) {
     document.getElementById('main-img').src = miniatura.src;

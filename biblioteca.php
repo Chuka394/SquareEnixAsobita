@@ -31,7 +31,7 @@ $img_hero = $img_hero ?: $base.'/recursos/imagenes/placeholder.svg';
     <link rel="stylesheet" href="<?= $base ?>/recursos/css/estilo.css">
 </head>
 <body>
-<?php include 'vistas/parciales/navbar.php'; ?>
+<?php include 'vistas/navbar.php'; ?>
 <?php if (isset($_GET['compra'])): ?><div class="form-alert success" style="margin:12px 20px;">Compra exitosa tu juego ya esta disponible en tu biblioteca.</div><?php endif; ?>
 
 <div class="biblioteca-wrap">
@@ -122,7 +122,7 @@ $img_hero = $img_hero ?: $base.'/recursos/imagenes/placeholder.svg';
     </div>
 </div>
 
-<?php include 'vistas/parciales/footer.php'; ?>
+<?php include 'vistas/footer.php'; ?>
 <script src="<?= $base ?>/recursos/js/principal.js"></script>
 <script>
 function filtrarBib(v){document.querySelectorAll('#lstJuegosBib .bib-game-item').forEach(i=>i.style.display=i.dataset.titulo.includes(v.toLowerCase())?'':'none');}

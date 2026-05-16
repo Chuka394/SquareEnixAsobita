@@ -30,7 +30,7 @@ if ($cat_actual) {
     <link rel="stylesheet" href="<?= $base ?>/recursos/css/estilo.css">
 </head>
 <body>
-<?php include 'vistas/parciales/navbar.php'; ?>
+<?php include 'vistas/navbar.php'; ?>
 
 <div class="container" style="padding-top:28px;padding-bottom:40px;">
     <h1 class="section-title">Categorias</h1>
@@ -76,7 +76,7 @@ if ($cat_actual) {
     <?php endif; ?>
 </div>
 
-<?php include 'vistas/parciales/footer.php'; ?>
+<?php include 'vistas/footer.php'; ?>
 <script src="<?= $base ?>/recursos/js/principal.js"></script>
 </body>
 </html>

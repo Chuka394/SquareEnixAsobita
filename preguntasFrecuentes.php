@@ -45,7 +45,7 @@ $faqs = [
     </style>
 </head>
 <body>
-<?php include 'vistas/parciales/navbar.php'; ?>
+<?php include 'vistas/navbar.php'; ?>
 
 <div class="container" style="max-width:780px;padding:32px 16px 60px;">
     <h1 style="font-family:'Rajdhani',sans-serif;font-size:32px;color:var(--accent);margin-bottom:8px;">Preguntas frecuentes</h1>
@@ -66,7 +66,7 @@ $faqs = [
     </div>
 </div>
 
-<?php include 'vistas/parciales/footer.php'; ?>
+<?php include 'vistas/footer.php'; ?>
 <script src="<?= $base ?>/recursos/js/principal.js"></script>
 </body>
 </html>

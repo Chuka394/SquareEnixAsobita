@@ -36,7 +36,7 @@ $cats_grid = $pdo->query("SELECT NombreCategoria FROM Categoria ORDER BY NombreC
     <link rel="stylesheet" href="<?= $base ?>/recursos/css/estilo.css">
 </head>
 <body>
-<?php include 'vistas/parciales/navbar.php'; ?>
+<?php include 'vistas/navbar.php'; ?>
 
 <?php if (!empty($juegos_carrusel)): ?>
 <div class="hero-carousel" style="position:relative;">
@@ -116,7 +116,7 @@ $cats_grid = $pdo->query("SELECT NombreCategoria FROM Categoria ORDER BY NombreC
         <?php endif; ?>
     </div>
 </div>
-<?php include 'vistas/parciales/footer.php'; ?>
+<?php include 'vistas/footer.php'; ?>
 <script src="<?= $base ?>/recursos/js/principal.js"></script>
 <script>
 function cambiarImgSlide(thumb, src) {

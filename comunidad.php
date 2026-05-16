@@ -53,7 +53,7 @@ $posts = $s->fetchAll();
     </style>
 </head>
 <body>
-<?php include 'vistas/parciales/navbar.php'; ?>
+<?php include 'vistas/navbar.php'; ?>
 
 <div class="container" style="padding-top:28px;padding-bottom:40px;">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;">
@@ -111,7 +111,7 @@ $posts = $s->fetchAll();
     <?php endif; ?>
 </div>
 
-<?php include 'vistas/parciales/footer.php'; ?>
+<?php include 'vistas/footer.php'; ?>
 <script src="<?= $base ?>/recursos/js/principal.js"></script>
 </body>
 </html>

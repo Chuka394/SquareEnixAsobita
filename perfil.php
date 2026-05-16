@@ -25,7 +25,7 @@ $s->execute([$yo['idusuario']]); $mis_res = $s->fetchAll();
     <link rel="stylesheet" href="<?= $base ?>/recursos/css/estilo.css">
 </head>
 <body>
-<?php include 'vistas/parciales/navbar.php'; ?>
+<?php include 'vistas/navbar.php'; ?>
 
 <div class="perfil-hero">
     <div class="container">
@@ -93,7 +93,7 @@ $s->execute([$yo['idusuario']]); $mis_res = $s->fetchAll();
     </div>
 </div>
 
-<?php include 'vistas/parciales/footer.php'; ?>
+<?php include 'vistas/footer.php'; ?>
 <script src="<?= $base ?>/recursos/js/principal.js"></script>
 <script src="<?= $base ?>/"></script>
 <script>
@@ -105,7 +105,7 @@ async function actualizarAvatar(input) {
     const fd = new FormData();
     fd.append('tipo', 'avatar');
     fd.append('archivo', input.files[0]);
-    const res = await fetch('/squareenix/controladores/subir_imagen.php', {method:'POST', body:fd});
+    const res = await fetch('/squareenix/controladores/SubirImagen.php', {method:'POST', body:fd});
     const data = await res.json();
     if (data.success) {
         document.querySelectorAll('.nav-user img, .perfil-avatar').forEach(img => img.src = data.url);

@@ -35,7 +35,7 @@ $total = array_sum(array_column($articulos, 'precio'));
     <link rel="stylesheet" href="<?= $base ?>/recursos/css/estilo.css">
 </head>
 <body>
-<?php include 'vistas/parciales/navbar.php'; ?>
+<?php include 'vistas/navbar.php'; ?>
 
 <div class="container" style="max-width:640px;padding:32px 16px;">
     <h1 style="font-family:'Rajdhani',sans-serif;margin-bottom:20px;">Confirmar compra del carrito</h1>

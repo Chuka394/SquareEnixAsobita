@@ -47,7 +47,7 @@ if ($usuario) {
     <link rel="stylesheet" href="<?= $base ?>/recursos/css/estilo.css">
 </head>
 <body>
-<?php include 'vistas/parciales/navbar.php'; ?>
+<?php include 'vistas/navbar.php'; ?>
 <div class="contacto-layout">
     <h1 class="section-title">Soporte y Contacto</h1>
 
@@ -111,7 +111,7 @@ if ($usuario) {
     <?php endif; ?>
     <?php endif; ?>
 </div>
-<?php include 'vistas/parciales/footer.php'; ?>
+<?php include 'vistas/footer.php'; ?>
 <script src="<?= $base ?>/recursos/js/principal.js"></script>
 </body>
 </html>

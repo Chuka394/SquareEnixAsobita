@@ -27,7 +27,7 @@ if ($q) {
     <link rel="stylesheet" href="<?= $base ?>/recursos/css/estilo.css">
 </head>
 <body>
-<?php include 'vistas/parciales/navbar.php'; ?>
+<?php include 'vistas/navbar.php'; ?>
 <div class="container" style="padding-top:28px;padding-bottom:40px;">
     <?php if (!$q): ?>
         <div class="empty-msg"><p>Ingresa un termino de búsqueda en la barra superior.</p></div>
@@ -54,7 +54,7 @@ if ($q) {
         <?php endif; ?>
     <?php endif; ?>
 </div>
-<?php include 'vistas/parciales/footer.php'; ?>
+<?php include 'vistas/footer.php'; ?>
 <script src="<?= $base ?>/recursos/js/principal.js"></script>
 </body>
 </html>

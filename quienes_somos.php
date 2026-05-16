@@ -11,7 +11,7 @@ $base = '/squareenix';
     <link rel="stylesheet" href="<?= $base ?>/recursos/css/estilo.css">
 </head>
 <body>
-<?php include 'vistas/parciales/navbar.php'; ?>
+<?php include 'vistas/navbar.php'; ?>
 
 <div class="container" style="max-width:780px;padding:32px 16px 60px;">
     <h1 style="font-family:'Rajdhani',sans-serif;font-size:32px;color:var(--accent);margin-bottom:24px;">Quiénes somos</h1>
@@ -56,7 +56,7 @@ $base = '/squareenix';
     </div>
 </div>
 
-<?php include 'vistas/parciales/footer.php'; ?>
+<?php include 'vistas/footer.php'; ?>
 <script src="<?= $base ?>/recursos/js/principal.js"></script>
 </body>
 </html>
